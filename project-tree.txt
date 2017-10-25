@@ -1,0 +1,48 @@
+project
+├── db.sqlite3
+├── dump.rdb
+├── manage.py
+├── readSensor.pyc
+├── sensor (project folder)
+	│ ├── asgi.py
+	│ ├── consumers.py
+	│ ├── consumers.pyc
+	│ ├── __init__.py
+	│ ├── __init__.pyc
+	│ ├── routing.py
+	│ ├── routing.pyc
+	│ ├── settings.py
+	│ ├── settings.pyc
+	│ ├── static
+	│ │ ├── jquery-1.12.1.min.js
+	│ │ ├── reconnecting-websocket.js
+	│ │ ├── reconnecting-websocket.min.js
+	│ │ └── sensor.js
+	│ ├── templates
+	│ │ └── sensor.html
+	│ ├── urls.py
+	│ ├── urls.pyc
+	│ ├── wsgi.py
+	│ └── wsgi.pyc
+	└── sensorWorker (application folder)
+		 ├── admin.py
+		 ├── admin.pyc
+		 ├── apps.py
+		 ├── __init__.py
+		 ├── __init__.pyc
+		 ├── management
+		 │ ├── commands
+		 │ │ ├── __init__.py
+		 │ │ ├── __init__.pyc
+		 │ │ ├── readSensor.py
+		 │ │ └── readSensor.pyc
+		 │ ├── __init__.py
+		 │ └── __init__.pyc
+		 ├── migrations
+		 │ ├── __init__.py
+		 │ └── __init__.pyc
+		 ├── models.py
+		 ├── models.pyc
+		 ├── tests.py
+		 ├── views.py
+		 └── views.pyc
