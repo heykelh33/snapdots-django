@@ -1,65 +1,96 @@
-* {
-	margin: 0px;
-	padding: 0px;
+*{
+	margin:0px;
+	padding: 0px;   
 }
 
-
-
-body {
-	background: transparent;
-	background: #343131;
-	background: scroll;
-	background: repeat;
-    text-align:center;
-    
-}
-
-#lateral {
-	display: inline-block;
+html, body{
 	height: 100%;
-	float:left;
-	margin: 5px auto;
-	font-size: 12px
-	padding: 10px
+}
+
+section{
+	display: block;
+}
+
+footer{
 	
-	background: #343131;
+	text-align: center;
+	height: 100%;
+	background-color:  #343131;
+	font:12px verdana;
+	color:#fff;
+
+}
+
+
+#lateral{
+	
+	float: left;
+	height: 100%;
+	width: 240px;
+	margin: 0px;
+	border: 1px solid #999;
 	text-align: left;
-
+	color: #343131;
+	border-top-right-radius: 10px;
+	box-shadow: rgba(150,150,150,0.9) 5px 0px 10px;
+	 
 }
-.images{
-	
-	float:left;
-	display: inline-block;
-	
-	
 
-}
-.title {
-	display: inline-block;
-	float:left;
-	padding: 0px;
-	text-align:center;
-	font-size: 10px
-	font:bold 36px verdana, sans-serif;
-	text-shadow: rgb(0,0,150) 3px 3px 5px;
-
-}
-#principal {
-	width: 870px;
-	float:left;
-	margin: 0px auto;
+#container{
+	background: #2980b9;
+	margin-top: 0px;
+	margin-bottom: 5px ;
+	padding-bottom: 15px;
+	padding-top: 10px;
 	text-align: center;
-	border: 1px solid #999999;
-	padding: 50px;
-	background: #e3e3e3;
+	color: #fff;
+	font:bold 15px verdana;
+	border-top-right-radius: 10px;
+	text-shadow: rgba(0,0,0,1) 0px 0px 20px;
+
 }
 
-footer {
-	margin: 10px auto;
-	font-size: smaller;
-	padding: 10px
-	border: 10px solid #999999;
-	background: #343131;
+#principal{
+	float: left;
+	height: 100%;
+	width: 1000px;
+	margin: 0px;
 	text-align: center;
+	font:bold 30px verdana;
+	padding: 120px 10px;
+
+}
+#logo{
+	float:left;
+	border: 1px solid #000;
+	width:50px; 
+	height:50px;
+	margin:1px 0px;
+
+
+
+}
+#QR{
+	border: 1px solid #000;
+	width:50px; 
+	height:50px;
+	margin: 5px;
+
+}
+
+#menu {
+	clear:left;
+	background:#fff;
+	padding: 15px 15px;
+}
+#menu li{
 	
+	padding: 2px 2px;
+	font:bold 15px sans-serif;
+	text-shadow: rgba(0,0,0,0.6) 0px 0px 2px;
+
+}
+
+footer a{
+	color: #008000;
 }

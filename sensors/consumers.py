@@ -1,28 +1,18 @@
-# from django.http import HttpResponse
-# from channels.handler import AsgiHandler
-
-# def http_consumer(message):
-#     # Make standard HTTP response - access ASGI path attribute directly
-#     response = HttpResponse("Hello world! You asked for %s" % message.content['path'])
-#     # Encode that response into message format (ASGI)
-#     for chunk in AsgiHandler.encode_response(response):
-#         message.reply_channel.send(chunk)
-
-
+import json
 from channels import Group
 
 def ws_connect(message):
     print("ws_connect consumer: Someone is connected.")
-    path = message['path']                                                     # i.e. /sensor/
-    
-    if path == b'/sensor/':
-        print("ws_connect consumer: Adding new user to sensor group")
-        Group("sensor").add(message.reply_channel)                             # Adds user to group for broadcast
-        message.reply_channel.send({                                            # Reply to individual directly
-           "text": "You're connected to sensor group...",
-        })
-    else:
-		print("Strange connector!!")
+    #path = message['path']                                                     # the path was fixed in routing.py i.e. /sensor/
+    #if path == b'/sensor/':
+    print("ws_connect consumer: Adding new user to sensor group")
+    Group("sensor").add(message.reply_channel)                                   # Adds user to group sensor for broadcast
+    message.reply_channel.send({"accept": True})  # Accept the connection request
+
+       
+    # else:
+    #     message.reply_channel.send({"close": True})  # No Accept the connection request
+    #     print("Strange connector!!")
 
 def ws_message(message):
     # ASGI WebSocket packet-received and send-packet message types

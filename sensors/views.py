@@ -10,5 +10,11 @@ from django.shortcuts import render
 
 def sensor(request):
 	
-    return render(request, 'sensor/sensor.html', {'sensor': 00})
+    return render(request, 'sensor/sensor.html', {'sensor': 0})
 
+def devices(request):
+
+	return render(request, 'sensor/devices.html', {'sensor': 0})
+
+def report(request):
+	return render(request, 'sensor/report.html', {'sensor': 0})

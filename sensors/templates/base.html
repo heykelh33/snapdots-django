@@ -11,37 +11,39 @@
 </head>
 
 <body>
-   
-  <section id="lateral">
-    
-    <img id="images" src="/static/images/snapdots_logo.png"/>
-    
-    <div class="title">
-      <h2>SnapDots</h2>
-      <h3>Environmental Monitoring</h3>
-    </div>
 
-    <ul>
-      <li>Dashboard</li>
-      <li>Devices</li>
-      <li>Report</li>
+  <section id="lateral">
+    <div id="container">   
+      <div id="logo-container">
+        <img id="logo" src="/static/images/snapdots_logo.png"/>
+      </div>
+      <div id="title-container">
+        <p id="title">Snapdots</p>
+        <p id="subtitle">Real Time Environmental Monitoring</p>
+      </div>
+    </div> 
+    
+    <ul id="menu">
+      <li><a href="{% url 'sensors:sensor' %}">Dashboard</a></li>
+      <li><a href="{% url 'sensors:devices' %}">Devices</a></li>
+      <li><a href="{% url 'sensors:report' %}">Report</a></li>
     </ul>
-    <footer class="footer">
-    Copyright &copy; 2017  <address><a href=”http://www.snapdots.com”>SnapDots</a></address> 
-    <img src="/static/images/QRCode.png" width="50" height="50" /> 
+    <footer>
+    <p>Copyright &copy; 2017</p>
+    <p><a id="snapdot-link" href="http://www.snapdots.com">SnapDots</a></p>
+    
+    <img id="QR" src="/static/images/QRCode.png"/> 
     </footer>
+    
 
   </section>
 
   <section id="principal">
-  {% block content %}
-  {% endblock %}
-  </section>
-
-
+ 
+    {% block content %}
+    {% endblock %}
   
-
-
+  </section>
   
 
   <script type= "text/javascript" src= "/static/js/jquery-1.12.1.min.js"></script>

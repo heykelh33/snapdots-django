@@ -1,6 +1,8 @@
+#run as python manage.py readSensor
 from channels import Group
 from django.core.management import BaseCommand
 import time
+import json
 
 #The class must be named Command, and subclass BaseCommand
 class Command(BaseCommand):
@@ -9,7 +11,11 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         x = 0
         while True:
-            Group("sensor").send({'text': str(x)})
+            
+            Group("sensor").send({'text': json.dumps({'text': str(x)})})
+
             time.sleep(20)
+            
             x = x + 1
+            
             self.stdout.write("Sensor reading..." + str(x))
