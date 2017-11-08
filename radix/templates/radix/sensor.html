@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Radix-channels</title>
+</head>
+
+<body>
+  <section>
+    <div>
+      <h2>SnapDots</h2>
+      <h3>Environmental Monitoring</h3>
+    </div>
+   </section>
+
+  <section>
+    <div>
+      <h3>Sensor Reading</h3>
+      <span class="readings"><strong id="sensor">Values= {{sensor}} </strong></span>
+    </div>
+  </section>
+  
+  <script type= "text/javascript" src="{% static "pool/jquery-1.12.1.min.js" %}"></script>
+  <script type= "text/javascript" src="{% static "pool/reconnecting-websocket.js" %}"></script>
+  <script type= "text/javascript" src="{% static "pool/sensors.js" %}"></script>
+
+</body>
+
+</html>

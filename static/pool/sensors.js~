@@ -2,10 +2,10 @@ $(function() {
     // When we're using HTTPS, use WSS too.
     var ws_scheme = window.location.protocol == "https:" ? "wss" : "ws";
     var chatsock = new ReconnectingWebSocket(ws_scheme + '://' + window.location.host + "/radix/");
-    console.log(s_scheme + '://' + window.location.host + "/radix/");
+
     chatsock.onopen = function() {
            console.log("Connectado con WebSocket! ");
-        //    $('#sensor').text("Connected!");
+           $('#sensor').text("Connected!");
            chatsock.send("Connected!");
     };
 

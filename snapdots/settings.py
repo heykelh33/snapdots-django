@@ -37,9 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',              #This is a session framework
     'django.contrib.messages',              #This is a messaging framework
     'django.contrib.staticfiles',           #This is a framework for managing static files
-    'sensors',                              #sensors App
+    # 'sensors',                              #sensors App
     'channels',                             #channels App
     'worker',                         #sensorWorker App
+    'radix'
 ]
 
 # MIDDLEWARE_CLASSES is a tuple containing middlewares to be executed
@@ -87,8 +88,10 @@ WSGI_APPLICATION = 'snapdots.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'sensordb',
+        'User':'cyberguille',
+        'PASSWORD':'4902c442*G',
     }
 }
 

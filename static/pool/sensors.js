@@ -2,10 +2,10 @@ $(function() {
     // When we're using HTTPS, use WSS too.
     var ws_scheme = window.location.protocol == "https:" ? "wss" : "ws";
     var chatsock = new ReconnectingWebSocket(ws_scheme + '://' + window.location.host + "/radix/");
-    console.log(s_scheme + '://' + window.location.host + "/radix/");
+
     chatsock.onopen = function() {
            console.log("Connectado con WebSocket! ");
-        //    $('#sensor').text("Connected!");
+           $('#sensor').text("Connected!");
            chatsock.send("Connected!");
     };
 
@@ -19,24 +19,5 @@ $(function() {
       chatsock.onopen();
     }
 
-    // var socket = new WebSocket('ws://' + window.location.host + '/sensor/');
-
-    // socket.onopen = function open() {
-    //   console.log('WebSockets connection created.');
-    // };
-
-    // socket.onmessage = function(message) {
-    //     console.log("Received Sock message!");
-    //     console.log(message);
-    //     $('#sensor').text(message.data);
-    // };
-
-    // if (socket.readyState == WebSocket.OPEN) {
-    //   socket.onopen();
-    // }
-
-
-
-
-
+    
 });
