@@ -1,4 +1,4 @@
-angular.module("radixPiApp", ['ngRoute', "ui-notification", "ng-fusioncharts", "bw.paging",'ngWebSocket'])
+angular.module("radixPiApp", ['ngRoute', "ui-notification", "ng-fusioncharts", "bw.paging",'ngWebSocket', 'nvd3'])
 
     .config(["$routeProvider", "$interpolateProvider", "$httpProvider",
         function ($routeProvider, $interpolateProvider, $httpProvider) {
@@ -52,7 +52,7 @@ angular.module("radixPiApp", ['ngRoute', "ui-notification", "ng-fusioncharts", "
                         icon: "thermometer2",
                         state: true,
                         datasource: $scope.datasource1,
-                        events: "events1",
+                        // events: "events1",
                         lastvalue: 0,
                         history: [],
                         pageTotal: 0,
@@ -65,7 +65,7 @@ angular.module("radixPiApp", ['ngRoute', "ui-notification", "ng-fusioncharts", "
                         icon: "water",
                         state: true,
                         datasource: $scope.datasource2,
-                        events: "events2",
+                        // events: "events2",
                         lastvalue: 0,
                         history: [],
                         pageTotal: 0,

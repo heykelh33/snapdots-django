@@ -33,22 +33,14 @@
                         {{p.lastvalue}}
                     </div>
                             
-                    <div fusioncharts 
-                        id="{{p.name}}Container"
-                        chartid="{{p.name}}"
-                        width="99%"
-                        height="50%"
-                        type="realtimearea"
-                        datasource="{{p.datasource}}",
-                        events="{{p.events}}">
-                    </div>    
+                    <nvd3 options="p.options" data="p.data"></nvd3>
                                         
                     <div style="text-align: right; position: absolute; right: 20px">
                         <label style="vertical-align: bottom; margin-bottom: 0.45rem; font-size: 0.8rem;">MOSTRAR: </label>
                         <div class="input-control select" style="width: 60px;"
                             data-toggle="tooltip" title="Cantidad de elementos a mostrar en la gráfica">                
                             <select style="border: 1px #d9d9d9 solid; width: 60px;" 
-                                ng-model="p.datasource.chart.numdisplaysets">
+                                ng-model="p.data">
                                 <option>12</option>
                                 <option>24</option>
                                 <option>48</option>
@@ -83,8 +75,8 @@
                                         <tr class="odd" data-ng-repeat="x in p.history.slice( ((p.currentPage-1)*p.pageSize), ((p.currentPage)*p.pageSize) ) | filter:search:strict">
                                             <!--.slice( ((currentPage-1)*pageSize), ((currentPage)*pageSize) ) -->
                                             <!--| orderBy:'-'-->
-                                            <td>{{x.label}}</td>
-                                            <td>{{x.value}}</td>
+                                            <td>{{x.x}}</td>
+                                            <td>{{x.y}}</td>
                                         </tr>   
                                     </tbody>
         
