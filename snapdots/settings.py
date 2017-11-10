@@ -91,7 +91,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'sensordb',
         'User':'cyberguille',
-        'PASSWORD':'4902c442*G',
+        'PASSWORD':'',
     }
 }
 
