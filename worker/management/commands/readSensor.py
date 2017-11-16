@@ -10,6 +10,8 @@ class Command(BaseCommand):
         x = 0
         while True:
             Group("sensor").send({'text': str(x)})
+            Group("sensor_humidity").send({'text': str(2*x)})
+            
             time.sleep(20)
             x = x + 1
             self.stdout.write("Sensor reading..." + str(x))

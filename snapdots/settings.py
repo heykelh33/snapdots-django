@@ -90,8 +90,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'sensordb',
-        'User':'cyberguille',
-        'PASSWORD':'',
+        'User':'root',
+        'PASSWORD':'root',
     }
 }
 
